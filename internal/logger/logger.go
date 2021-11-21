@@ -18,7 +18,7 @@ import (
 // This internal package hides the actual logging functions from the user.
 
 // Logger instance used by xray to log. Set via xray.SetLogger().
-var Logger xraylog.Logger = xraylog.NewDefaultLogger(os.Stdout, xraylog.LogLevelInfo)
+var Logger xraylog.Logger = xraylog.NewDefaultLogger(os.Stdout, xraylog.LogLevelDebug)
 
 func Debugf(format string, args ...interface{}) {
 	Logger.Log(xraylog.LogLevelDebug, printfArgs{format, args})
